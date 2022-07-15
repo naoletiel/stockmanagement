@@ -1,0 +1,44 @@
+
+<html>
+    <body>
+    
+<div class="contener">
+<h1 class="text-center"><%= title%></h1>
+
+</div>
+   
+        <div class="div" style="justify-content:center;align-items: center;margin: 20px 120px;" >
+            
+            <html><head>
+                <link rel="stylesheet" type="text/css" href="/static/css/bulma.min.css">
+            </head></html>
+            <h2>selled product info</h2>
+            <table class="MY" >
+               <thead>
+                    <tr>
+                        <th >id   </th>
+                        <th > selling_price  </th>
+                        <th>  seling date  </th>
+                        <th > selled quantity  </th>
+                        <th >product id </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                   <% selled_items.forEach((selle)=>{                 
+                        %>
+                        <tr>
+                            <td><%= selle.id %></td>
+                            <td><%= selle.selling_price %></td>
+                            <td><%= selle.selling_date%></td>
+                            <td><%= selle.selled_quantity%></td>
+                            <td><%= selle.product_id%></td>
+                        </tr>
+                        <%});
+                           %>
+                </tbody>
+                
+            </table>
+        </div>
+    </body>
+</html>
