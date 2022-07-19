@@ -1,0 +1,50 @@
+
+<h2 class="title is-2"><%= title %></h2>
+
+<html>
+    <body>
+        <h1>WELCOME TO MY STOCK</h1>
+<div class="contener">
+<h1 class="text-center"><%= title%></h1>
+
+</div>
+   
+        <div class="div" style="justify-content:center;align-items: center;margin: 20px 120px;" >
+            
+            <html><head>
+                <link rel="stylesheet" type="text/css" href="/static/css/bulma.min.css">
+            </head></html>
+            <h2>product info</h2>
+            <table class="MY" >
+               <thead>
+                    <tr style="justify-content: space-between; ">
+                        <th >id   </th>
+                        <th > name    </th>
+                        <th>  catagory  </th>
+                        <th > quantity  </th>
+                        <th >expierd_date </th>
+                        <th >price</th>
+                        <th > store_id</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                   <% products.forEach((product)=>{                 
+                        %>
+                        <tr>
+                            <td><%= product.id%></td>
+                            <td><%= product.product_name%></td>
+                            <td><%= product.catagory%></td>
+                            <td><%= product.quantity%></td>
+                            <td><%= product.expiered_date%></td>
+                            <td><%= product.price%></td>
+                            <td><%= product.store_id%></td>
+                        </tr>
+                        <%});
+                           %>
+                </tbody>
+                
+            </table>
+        </div>
+    </body>
+</html>
